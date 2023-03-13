@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - npm install -g typescript
+      - npm install -g @nest/cli
+      - npm install
+  build:
+    commands:
+      - npm build
+
+artifacts:
+  files:
+    - package-lock.json
+    - package.json
+    - 'build/**/*'
+    - '.platform/**/*' # AWS Elastic Beanstalk configuration files
+    - '.ebextensions/**/*' # AWS Elastic Beanstalk configuration files
+  discard-paths: no
