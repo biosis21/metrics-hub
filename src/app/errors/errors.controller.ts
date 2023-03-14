@@ -27,7 +27,7 @@ export class ErrorsController {
   @Delete()
   @ApiOperation({ summary: 'Clean all incorrectly formatted records' })
   @ApiResponse({
-    status: 200,
+    status: 202,
     description: 'Clear all errors',
   })
   async clearAll(): Promise<void> {

@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "b93777b1-0d54-46d7-b42f-ac949b60fc5f",
+		"name": "Metrics Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13767593"
+	},
+	"item": [
+		{
+			"name": "Create record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"data\": \"3659w51380:1640995229697:'Temperature':90.48256793121914\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/temp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"temp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all errors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/errors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clean all errors",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/errors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"errors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
